@@ -6,6 +6,18 @@ from typing import Final
 
 load_dotenv()
 
-TOKEN = os.getenv("token")
-
-MONGODB_URI = os.getenv("mongo_uri")
+#thing for replit
+try:
+    #if it possible
+    # os.environ['token']
+    # os.getenv("mongo_uri")
+    TOKEN = os.environ['token']
+    MONGODB_URI = os.getenv("mongo_uri")
+except:
+    #no replit
+    TOKEN = os.getenv("token")
+    MONGODB_URI = os.getenv("mongo_uri")
+# else:
+#     #replit
+#     TOKEN = os.environ['token']
+#     MONGODB_URI = os.getenv("mongo_uri")

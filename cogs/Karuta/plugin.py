@@ -145,7 +145,9 @@ class Karuta(Plugin):
             try:
                 karuta_msg = await self.bot.wait_for(
                     "message",
-                    check=lambda msg: msg.reference.message_id == message.id and msg.author.id == 646937666251915264,
+                    check=lambda msg: msg.reference.message_id == message.id and 
+                    msg.author.id == 646937666251915264,
+                    #str.startswith(msg.embeds[0].description.split('\n')[2],f"The list is empty."),
                     timeout=30
                 )
 
