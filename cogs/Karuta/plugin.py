@@ -141,7 +141,7 @@ class Karuta(Plugin):
 
     @commands.Cog.listener()
     async def on_message(self, message: Message):
-        if re.search(r'(o\s+(is)|[:=]\s*wl?)|(wl?(<>|>>))', message.content):
+        if re.search(r'(o\s+(is)|[:=]\s*wl?)|(wl?(<>|>>|<<|<=?\d+|>=?d+))', message.content):
             try:
                 karuta_msg = await self.bot.wait_for(
                     "message",

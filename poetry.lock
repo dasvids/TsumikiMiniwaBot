@@ -108,6 +108,14 @@ test = ["coverage", "pytest", "pytest-asyncio", "pytest-cov", "pytest-mock", "ty
 voice = ["PyNaCl (>=1.3.0,<1.6)"]
 
 [[package]]
+name = "dispie"
+version = "0.0.11"
+description = "🚀 A fantastic library created for use with Discord.py"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[[package]]
 name = "dnspython"
 version = "2.3.0"
 description = "DNS toolkit"
@@ -263,7 +271,7 @@ multidict = ">=4.0"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "7300379966f4341a2b653fd73caf16d7940573d768bae7f535d3dbd69d8bca31"
+content-hash = "ff4f6963249cc2748047d8dabac9772c0415ee5d99aba6dbb97b72448ff31693"
 
 [metadata.files]
 aiohttp = []
@@ -275,6 +283,7 @@ click = []
 colorama = []
 discord = []
 "discord.py" = []
+dispie = []
 dnspython = []
 flask = []
 frozenlist = []
