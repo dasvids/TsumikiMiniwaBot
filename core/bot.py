@@ -21,6 +21,7 @@ class Bot(commands.AutoShardedBot):
             command_prefix="mi.",
             intents=discord.Intents.all(),
             chunk_guild_at_startup=False,
+            help_command= None,
         )
 
     async def setup_hook(self) -> None:
