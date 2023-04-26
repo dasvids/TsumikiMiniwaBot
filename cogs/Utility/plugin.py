@@ -7,6 +7,7 @@ from discord.ext import commands
 from discord.ext.commands import Context
 from discord.ui import Button, View, Select
 from discord import Interaction, app_commands, Member, User, SelectOption
+from dispie import EmbedCreator
 
 class HelpSelect(Select):
     def __init__(self, bot: commands.AutoShardedBot):
@@ -76,6 +77,11 @@ class Utility(Plugin):
         )
         view = View().add_item(HelpSelect(self.bot))
         await ctx.send(embed=embed,view=view)
+        
+    @commands.hybrid_command(name='create-embed', description= "Embed builder")
+    async def create_embed(self,ctx: Context):
+        view = EmbedCreator(bot=self.bot)
+        await ctx.send(embed=view.get_default_embed,view=view)
         
 
 
