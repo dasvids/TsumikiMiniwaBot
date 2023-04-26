@@ -138,7 +138,7 @@ class Karuta(Plugin):
                     embed.add_field(name=key, value=founded[key])
 
         await ctx.send(embed=embed)
-
+    
     @commands.Cog.listener()
     async def on_message(self, message: Message):
         if re.search(r'(o\s+(is)|[:=]\s*wl?)|(wl?(<>|>>))', message.content):

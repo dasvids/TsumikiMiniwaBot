@@ -3,10 +3,12 @@ import discord
 import os
 import sys
 import asyncio
+from pathlib import Path
 
 from typing import Optional
 from .embed import Embed
 from discord.ext import commands
+from PIL import Image
 
 from logging import getLogger
 

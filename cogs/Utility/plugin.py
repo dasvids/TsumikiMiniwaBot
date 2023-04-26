@@ -43,7 +43,7 @@ class HelpSelect(Select):
             embed = embed,
             ephemeral=True
         )
-        
+
 
 class Utility(Plugin):
     def __init__(self, bot: Bot) -> None:
@@ -84,6 +84,5 @@ class Utility(Plugin):
         await ctx.send(embed=view.get_default_embed,view=view)
         
 
-
 async def setup(bot: Bot) -> None:
-    await bot.add_cog(Utility(bot))
+     await bot.add_cog(Utility(bot))
